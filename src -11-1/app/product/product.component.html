@@ -1,0 +1,113 @@
+<h1>Creation</h1>
+<form>
+    <div>
+    <label>
+      <span>Full name</span>
+      <input
+        type="text"
+        name="customerName" [value]="searchValue"
+        placeholder="Enter Customer name" #name>
+    </label>
+    </div>
+    <div>
+      <label>
+        <span>Vehicle No</span>
+        <input
+          name="number" [value]="searchValue"
+          placeholder="Enter Vehicle No" #number>
+      </label>
+    </div>
+    <div>
+      <label>
+        <span>Model Name	</span>
+        <input
+          type="text"
+          name="modelName" [value]="searchValue"
+          placeholder="Enter Model Name" #model>
+      </label>
+    </div>
+    <div>
+      <label>
+          <span>RegistrationState	</span>
+          <input
+            type="text"
+            name="RegistrationState" [value]="searchValue"
+            placeholder="Enter RegistrationState" #state>
+        </label>
+      </div>
+      <div>
+        <label>
+            <span>Type	</span>
+            <input
+              type="text"
+              name="Type" [value]="searchValue"
+              placeholder="Enter Type" #type>
+          </label>
+    </div>
+    <button type="submit" (click)="onAddItem(name,number,model,state,type)">Add</button>
+  </form>
+<h2>Vehicles List</h2>
+<table>
+    <thead>
+        <tr>
+            <th>CustomerName</th>
+            <th>VehicleNo</th>
+            <th>ModelName</th>
+            <th>RegistrationState</th>
+            <th>Type</th>
+        </tr>
+    </thead>
+  <tbody>
+    <tr *ngFor="let vehicle of vehiclesDetails; let rowIndex = index">
+     <td>{{vehicle.CustomerName}}</td>
+     <td>{{vehicle.VehicleNo}} </td>
+     <td>{{vehicle.ModelName}} </td>
+     <td>{{vehicle.RegistrationState}} </td>
+     <td>{{vehicle.Type}} </td>
+     <button (click)="deleteFieldValue(rowIndex)" type="button" class="btn btn-default">Delete</button >
+    </tr>
+  </tbody>
+</table>
+
+
+<!-- <table class="table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th>Code</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let field of fieldArray; let i = index">
+            <td>
+                <input [(ngModel)]="field.code" class="form-control" type="text" name="{{field.code}}" />
+            </td>
+            <td>
+                <input [(ngModel)]="field.name" class="form-control" type="text" name="{{field.name}}" />
+            </td>
+            <td>
+                <input [(ngModel)]="field.price" class="form-control" type="text" name="{{field.price}}" />
+            </td>
+            <td>
+                <button class="btn btn-default"  type="button" (click)="deleteFieldValue(i)">Delete</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input class="form-control" type="text" id="newAttributeCode" [(ngModel)]="newAttribute.code" name="newAttributeCode" />
+            </td>
+            <td>
+                <input class="form-control" type="text" id="newAttributeName" [(ngModel)]="newAttribute.name" name="newAttributeName" />
+            </td>
+            <td>
+                <input class="form-control" type="text" id="newAttributePrice" [(ngModel)]="newAttribute.price" name="newAttributePrice" />
+            </td>
+            <td>
+                <button class="btn btn-default" type="button" (click)="addFieldValue()">Add</button>
+            </td>
+        </tr>
+    </tbody>
+</table> -->
+<app-navigation></app-navigation>

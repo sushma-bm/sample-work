@@ -1,0 +1,17 @@
+<div class = "container">
+    <h1>Product Form</h1>
+    <form>
+      <div class="form-group">
+        <label>ID</label>
+        <input type="text" class="form-control" id="productid" required name="id" [(ngModel)]="model.productid">
+      </div>
+      <div class="form-group">
+          <label>Name</label>
+          <input type="text" class="form-control" id="productname" required name="name"  [(ngModel)] = "model.productname">
+        </div>
+    <div class="form-group">
+        <label>Name1</label>
+        <input [value]="name1" (input)="name1 = $event.target.value">{{name1}}
+      </div>
+  </form>
+</div>

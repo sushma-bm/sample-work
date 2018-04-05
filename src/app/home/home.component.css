@@ -1,0 +1,43 @@
+/* .home-container{padding: 20px;
+  background: url(./app/Images/bg.jpg) no-repeat;
+  height: 783px;
+  background-size: cover;opacity: 0.5;
+} */
+.home-container::after {
+  content: "";
+  background:  url(./app/Images/bg.jpg) no-repeat;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;background-size: cover;
+}
+.hm-wrap{background-color: rgba(0, 0, 0, 0.7);
+  height: 838px;}
+.home-container h1{color:#fff;}
+.categoryBlk {display: inline-block;
+  margin: 70px 0px;
+  padding: 0px;margin-left: 20px;}
+.categoryBlk li{
+  float: left;
+  margin-right: 40px;
+list-style-type: none;text-align: center}
+  .categoryBlk li a{color: #000;
+    font-size: 20px;
+    text-decoration: none;
+    width: 300px;
+    padding: 20px 30px;
+    height: 176px;
+    background: #fff;display: block;border: 1px solid #000;}
+
+  .categoryBlk img{margin: 0 auto;display: block}
+  .categoryBlk li a span{
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin: 0 auto;
+    border:2px solid #ccc;border-radius: 50%;margin-bottom: 20px;padding: 10px;
+  }
+.bk{background: url(./app/Images/b.png) no-repeat 10px 5px;}
+.ck{background: url(./app/Images/c.png) no-repeat 10px 5px;}

@@ -1,0 +1,10 @@
+<div class="home-container">
+<h1>{{name}}</h1>
+<div>
+<ul *ngFor="let category of categories" class="categoryBlk">
+  <img [src] = 'category.url'>
+  <li>{{category.Name}}</li>
+</ul>
+</div>
+<button type="submit" (click)="addCategory()"> Add Category</button>
+</div>

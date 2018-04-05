@@ -1,0 +1,34 @@
+
+h1,h2{    font-size: 20px;
+margin-left: 20px;}
+form{height: 65px;
+margin-left: 20px;}
+form label{float: left;width:200px;}
+.subBtn{background: #000;
+margin-top: 11px;
+color: #fff;
+border: 0px;
+padding: 10px;
+width: 130px;
+text-transform: uppercase;
+margin-left: 20px;}
+table{
+  border-collapse: collapse;
+  width: 90%;
+  margin-left: 20px;
+  border-spacing: 0px;}
+table tbody tr:nth-child(even){background-color: #f2f2f2;}
+table thead th {    padding-top: 12px;
+padding-bottom: 12px;
+text-align: left;
+background-color: #4CAF50;
+color: white;}
+.b1 table{width:100%;}
+table tbody tr :hover {background-color: #ddd;}
+table thead th ,table tbody tr td {    border: 1px solid #ddd;
+padding: 8px;}
+table thead th{background: #000;color:#fff;    width: 15%;
+  text-align: center;}
+  table tbody tr td{    width: 22%;
+    text-align: center;}
+    .btn-del,.btn-view{width:150px;}

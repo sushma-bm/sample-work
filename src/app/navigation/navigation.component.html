@@ -1,0 +1,7 @@
+<nav *ngIf="nav.visible">
+  <a routerLink='/home' routerLinkActive='active'>Home</a>
+  <a routerLink='/two-wheeler' routerLinkActive='active'>Two Wheeler</a>
+  <a routerLink='/four-wheeler' routerLinkActive='active'>Four Wheeler</a>
+  </nav>
+<router-outlet></router-outlet>
+<h1>{{name| uppercase}}</h1>

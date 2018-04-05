@@ -1,0 +1,11 @@
+.home-container{margin: 20px;}
+.categoryBlk{
+  border: 1px solid #ccc;
+  margin-right: 40px;
+  width: 350px;
+  height: 250px;
+  padding: 0px;
+  display: inline-block;}
+  .categoryBlk img{margin: 0 auto;display: block}
+.categoryBlk li{
+list-style-type: none;text-align: center}

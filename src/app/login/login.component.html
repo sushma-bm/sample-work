@@ -1,0 +1,59 @@
+<div class="loginWrapper">
+<div  class="signInWrapper" *ngIf="edited">
+  <form  class="loginForm" (ngSubmit)="save(loginForm.value, loginForm.valid)" #loginForm="ngForm">
+    <h2>Sign In</h2>
+    <div class="form-group">
+      <label for="emailaddress">Email Address</label>
+      <input  type="text" class="form-control" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"  #email [ngModel]="email.value" required  name="emailaddress"/>
+      <br>
+    </div>
+    <div class="form-group">
+      <label for="name">Password</label>
+      <input type="password" class="form-control" [ngModel]="password.value" required  #password name="password">
+      <br>
+    </div>
+    <a href="" class="fgtPass">Forgot Password?</a>
+    <a href="" class="btnSignUp" (click)="newHero()">Sign Up</a>
+    <button type="button"  class="btn btn-success btn-block"  [disabled]="loginForm.invalid" (click)="addToast()">
+     Submit</button>
+  </form>
+</div>
+
+
+<!--Signup-->
+<div *ngIf="signUpWrapper" >
+  <form class="loginForm" (ngSubmit)="onSubmit()" #loginForm="ngForm">
+    <h2>Sign Up</h2>
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input id="name" name="name" class="form-control" required maxlength="12" [(ngModel)]="model.name"  name="name" #name="ngModel" >
+        <div [hidden]="name.valid || name.pristine"  class="alert alert-danger">
+      </div>
+      </div>
+    <div class="form-group">
+      <label for="name">Email Address</label>
+      <input type="text" class="form-control" id="emailaddress" #email>
+      <br>
+    </div>
+    <div class="form-group">
+      <label for="name">Mobile Number</label>
+      <input type="text" class="form-control" id="mobilenumber" #mobile>
+      <br>
+    </div>
+    <div class="form-group">
+      <label for="name">Password</label>
+      <input type="password" class="form-control" id="password" #password>
+      <br>
+    </div>
+    <div class="form-group">
+      <label for="name">Confirm Password</label>
+      <input type="password" class="form-control" id="confirmPassword" #confirmPassword>
+      <br>
+    </div>
+    <button type="button"  class="btn btn-success btn-block"  [disabled]="loginForm.invalid" (click)="saveTodos()">Submit</button>
+  </form>
+</div>
+</div>
+<router-outlet></router-outlet>
+
+<ng2-toasty [position]="'top-right'"></ng2-toasty>

@@ -1,0 +1,78 @@
+.ng-valid[required], .ng-valid.required  {
+  border-left: 5px solid #42A948; /* green */
+}
+
+.ng-invalid:not(form)  {
+  border-left: 5px solid #a94442; /* red */
+}
+
+.loginWrapper {
+  background: #1abc9c;
+}
+
+.loginForm {
+  margin: 0 auto;
+  border: 1px solid #16a085;
+  width: 350px;
+  padding: 20px 30px;
+  position: absolute;
+  background: #fff;
+  left: 0;
+  right: 0;
+  margin-top: 150px;
+  height: 550px;
+}
+
+.loginForm h2{text-align: center;}
+
+.form-group {
+  margin-bottom: 20px;
+  display: block;
+  font-size: 14px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #179076;
+  font-weight: bold;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px 0px;
+  text-indent: 10px;
+  border-left: 5px solid #07774f;
+}
+
+form a {
+  color: #07774f;
+  font-size: 13px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top:30px;
+}
+
+button {
+  width: 130px;
+  display: block;
+  margin: 0 auto;
+  padding: 13px 20px;
+  background: #47c19a;
+  color: #fff;
+  border: 1px solid #136f27;
+  margin-top: 90px;
+}
+.fgtPass{float:left;}
+.btnSignUp{float:right;}
+button:disabled {
+  background-color: #a9e4d1;
+  border-color: #ccc;
+}
+.extraclass { display: none; }
+/* #toasty{
+  color: #fff;
+  width: 200px;
+  margin-top: 40px;
+  padding: 10px 5px;}
+.toasty-type-success{background-color:green;} */

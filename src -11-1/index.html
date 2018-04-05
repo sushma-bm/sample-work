@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>MyAngular2</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+  <app-my-app>Loading...</app-my-app>
+  <div class="jumbotron">
+      <h2>Login Form</h2>
+      <form #form="ngForm" (ngSubmit)="submitForm(form.value)">
+        <div class="form-group">
+          <label>First Name:</label>
+          <input type="text" class="form-control" placeholder="Enter your first name" name="firstName" ngModel required>
+        </div>
+        <div class="form-group">
+          <label>Last Name</label>
+          <input type="text" class="form-control" placeholder="Enter your last name" name="lastName" ngModel required>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-default">Submit</button>
+        </div>
+      </form>
+    </div>
+</body>
+</html>

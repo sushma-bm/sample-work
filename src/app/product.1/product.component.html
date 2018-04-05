@@ -1,0 +1,58 @@
+<h1> Add Two Wheeler </h1>
+<div>
+<form>
+    <label>
+      <span>Full name</span>
+        <input type="text" name="customerName" id="customerName" #name>
+</label>
+<label><span>Vehicle No</span> <input name="number" id="number" #number> </label>
+<label><span>Model Name </span><input type="text" name="modelName" #model> </label>
+<label><span>RegistrationState</span><input type="text" name="RegistrationState" #state> </label>
+<label><span>Type </span><input type="text" name="Type" #type> </label>
+<button type="submit" class="subBtn" (click)="onAddItem(name, number, model, state, type) ">Submit </button>
+</form>
+</div>
+<hr>
+<h2>Two wheeler List</h2>
+<table>
+    <thead>
+        <tr>
+        <th>CustomerName</th>
+        <th>VehicleNo</th>
+        <th>ModelName</th>
+        <th>RegistrationState</th>
+        <th>Type</th>
+        </tr>
+        </thead>
+<tbody *ngFor ="let vehicle of vehiclesDetails;let i = index" class="b1">
+<tr>
+<td>{{vehicle.CustomerName}}</td>
+<td>{{vehicle.VehicleNo}} </td>
+<td>{{vehicle.ModelName}} </td>
+<td>{{vehicle.RegistrationState}} </td>
+<td>{{vehicle.Type}} </td>
+<button type="button" class="btn btn-default btn-del" (click)="deleteFieldValue(i)">Delete</button>
+<button type="button" class="btn btn-default btn-view" (click)="detailsList(i)">View Details</button>
+</tr>
+<div *ngIf="vehicle.show"  class="d1">
+    <h1>Details</h1>
+    <div class="names">
+      <div class="fullName"> {{vehicle.CustomerName}}</div>
+      <div>{{vehicle.VehicleNo}}</div>
+      <img [src]="vehicle.url">
+    </div>
+  </div>
+</tbody>
+
+</table>
+
+<div *ngIf="edited">
+<h1>Detail view</h1>
+<div>
+    <p>{{vehicle.CustomerName}}</p>
+    <p>{{vehicle.ModelName}}</p>
+</div>
+<p></p>
+<p> </p>
+</div>
+

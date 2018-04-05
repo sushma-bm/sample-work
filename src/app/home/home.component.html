@@ -1,0 +1,23 @@
+  <div class="home-container">
+      <!-- <div *ngFor="let category of categories;let i = index"> -->
+        <div class="hm-wrap">
+      <ul  class="categoryBlk">
+      <!-- <img [src]="category.url"> -->
+      <!-- <li>{{category.Name}}</li> -->
+      <li> <a routerLink="/two-wheeler" routerLinkActive="active"><span class="bk"></span>Two Wheeler</a></li>
+      <li><a routerLink="/four-wheeler" routerLinkActive="active"><span class="ck"></span>Four Wheeler</a></li>
+    </ul>
+    <div *ngIf="categoryNew"  class="d1">
+        <h1>Create Category</h1>
+        <div class="names">
+            <form>
+            <label><span>Category Name </span><input type="text" name="categoryName" #cat> </label><br>
+            <button type="submit" (click)="createCategory(cat)">Create</button>
+         </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- <button type="submit" (click)="addCategory(i)" *ngIf="categoryC">Add Category</button> -->
+    </div>
+
